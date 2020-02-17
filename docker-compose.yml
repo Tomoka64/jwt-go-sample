@@ -1,0 +1,11 @@
+version: '3'
+services:
+  app:
+    environment:
+      - RSA_PUBKEY=public-keys/demo.rsa.pub.pem
+      - RSA_PRIKEY=secret-keys/demo.rsa
+      - ECDSA_PUBKEY=public-keys/demo.ecdsa.pub.pem
+      - ECDSA_PRIKEY=secret-keys/demo.ecdsa
+    build: .
+    ports:
+      - "8080:8080"
